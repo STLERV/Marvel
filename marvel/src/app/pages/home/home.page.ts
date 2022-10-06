@@ -4,6 +4,12 @@ import { HttpClient } from '@angular/common/http';
 import { NavEstraServiceService } from '../../services/nav-estra-service.service';
 import { Router } from '@angular/router';
 import { Globalization } from '@awesome-cordova-plugins/globalization/ngx';
+import { TranslateService } from '@ngx-translate/core';
+
+import es from '../../../assets/i18n/es.json'; // This import style requires "esModuleInterop", see "side notes"
+import en from '../../../assets/i18n/en.json'; // This import style requires "esModuleInterop", see "side notes"
+
+
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
@@ -12,11 +18,24 @@ import { Globalization } from '@awesome-cordova-plugins/globalization/ngx';
 export class HomePage {
   heroes: any = [];
   heroe: any = [];
-  constructor(private router: Router, public navCtrl: NavEstraServiceService, public http: HttpClient, public apiService: ApiService) { }
+  titleHome: string = "";
+  constructor(private router: Router, public navCtrl: NavEstraServiceService, public http: HttpClient, public apiService: ApiService, private translate: TranslateService) 
+  {
 
+    console.log(this.translate.getBrowserLang());
 
+    if(this.translate.getBrowserLang() == "es")
+    {
+      this.titleHome = es.TitleHome;
 
+    }
+    else if(this.translate.getBrowserLang() == "en")
+    {
+      this.titleHome = en.TitleHome;
 
+    }
+
+   }
 
 
   ngOnInit() {
