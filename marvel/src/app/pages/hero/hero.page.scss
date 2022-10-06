@@ -1,0 +1,41 @@
+ion-avatar {
+    width: 50% !important;
+    height: 50% !important;
+    max-width: 50% !important;
+    max-height: 50% !important;
+    --border-radius: 4px;
+    margin: auto;
+
+    display: block;
+}
+
+ion-toolbar {
+    --background: #203c42;
+}
+
+ion-card {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-content: center;
+
+}
+
+ion-title {
+    color: #ededf0;
+    font-size: 1.5rem;
+}
+
+ion-back-button {
+    color: #f7f7fb;
+    position: absolute;
+    right: 0;
+    top: 0;
+
+}
+
+ion-text-center {
+    font-size: 3rem;
+
+}
+

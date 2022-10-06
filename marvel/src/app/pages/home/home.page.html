@@ -1,0 +1,22 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title class="ion-text-center">
+      LISTADO DE SUPERHEROES
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list>
+    <ion-card>
+      <ion-item class="hero" *ngFor="let hero of heroes" (click)="getDetails(hero.id)">
+        <ion-avatar item-left>
+          <img src="{{hero.thumbnail.path}}.{{hero.thumbnail.extension}}">
+        </ion-avatar>
+        <h2>&nbsp;&nbsp;{{hero.name}}</h2>
+      </ion-item>
+    </ion-card>
+  </ion-list>
+
+</ion-content>

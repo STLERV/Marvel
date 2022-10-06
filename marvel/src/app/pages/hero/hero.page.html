@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>HERO</ion-title>
+    <ion-back-button defaultHref="home"></ion-back-button>
+  </ion-toolbar>
+</ion-header>
+<ion-content padding>
+  <ion-card class="ion-text-center">
+    <h1>{{hero.name}}</h1>
+    <ion-avatar item-left>
+      <img src="{{hero.thumbnail.path}}.{{hero.thumbnail.extension}}">
+    </ion-avatar>
+
+    <h1>
+
+      <strong>Comics</strong><br>
+
+      {{hero.comics.available}}
+    </h1>
+    <hr>
+    <h1>
+      <strong>Series:</strong><br>
+      {{hero.series.available}}
+    </h1>
+    <hr>
+    <h1>
+      <strong>Stories:</strong><br>
+      {{hero.stories.available}}
+    </h1>
+
+  </ion-card>
+
+</ion-content>
